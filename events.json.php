@@ -20,16 +20,20 @@ echo json_encode(array('success' => 1, 'result' => $out));
 exit;
 
 
-//$d = DateTime::createFromFormat('d-m-Y', '22-09-2008');
+$d = DateTime::createFromFormat('d-m-Y', '22-09-2008');
 //echo $d->getTimestamp();
 
 
 <?php*/
 $out = array();
-//$d = mktime(0, 0, 0, date("m")-1, date("d"),   date("Y"));/+$i;
-for($i=1; $i<=15; $i++){ 
+$d_Start = DateTime::createFromFormat('d-m-Y', '01-01-2018');
+$d_Event = DateTime::createFromFormat('d-m-Y', '27-01-2018');
+$d_Ecart=$d_Event-$d_Start;
+$d_Ecart=$d_Ecart*(24*60*60)+(14*3600);
+
+//for($i=1; $i<=15; $i++){ 
 	//echo "tour : ".$i."<br/>";//from day 01 to day 15
-	$d = mktime(0, 0, 0, date("m"), date("d")+$i,   date("Y"));
+	//$d = mktime(0, 0, 14, date("m"), date("d")+$i,   date("Y"));
 	//echo $d->getTimestamp()."<br/>";
 	//$data = $d->getTimestamp();
 	$out[] = array(
@@ -37,9 +41,9 @@ for($i=1; $i<=15; $i++){
 			'title' => 'Event name '.$i,
 			'url' => 'site web',
 			'class' => 'event-important',
-			'start' => $d.'000');//.'000'
+			'start' => $d_Ecart."000");//.'000'
 	//);
-}
+//}
 
 echo json_encode(array('success' => 1, 'result' => $out));
 //exit;
