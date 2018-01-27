@@ -30,14 +30,14 @@ $out = array();
 for($i=1; $i<=15; $i++){ 
 	echo "tour : ".$i."<br/>";//from day 01 to day 15
 	$d = mktime(0, 0, 0, date("m"), date("d")+$i,   date("Y"));
-	echo $d->getTimestamp()."<br/>";
-	$data = $d->getTimestamp();
+	//echo $d->getTimestamp()."<br/>";
+	//$data = $d->getTimestamp();
 	$out[] = array(
 			'id' => $i,
 			'title' => 'Event name '.$i,
 			'url' => 'site web',
 			'class' => 'event-important',
-			'start' => $data.'000');//.'000'
+			'start' => $d.'000');//.'000'
 	//);
 }
 
