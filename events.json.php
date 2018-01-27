@@ -27,7 +27,8 @@ exit;
 <?php*/
 $out = array();
 
-for($i=1; $i<=15; $i++){ 	//from day 01 to day 15
+for($i=1; $i<=15; $i++){ 
+	echo "tour : ".$i."<br/>";//from day 01 to day 15
 	$d = DateTime::createFromFormat('d-m-Y', '26-01-2018')+$i;
 	echo $d->getTimestamp()."<br/>";
 	$data = $d->getTimestamp();
@@ -40,6 +41,6 @@ for($i=1; $i<=15; $i++){ 	//from day 01 to day 15
 	);
 }
 
-echo json_encode(array('success' => 1, 'result' => $out));
+//echo json_encode(array('success' => 1, 'result' => $out));
 //exit;
 ?>
