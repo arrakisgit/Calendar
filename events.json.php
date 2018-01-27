@@ -29,17 +29,17 @@ $out = array();
 
 for($i=1; $i<=15; $i++){ 	//from day 01 to day 15
 	$d = DateTime::createFromFormat('d-m-Y', '26-01-2018')+$i;
-	//echo $d->getTimestamp();
+	echo $d->getTimestamp()."<br/>";
 	$data = $d->getTimestamp();
 	$out[] = array(
 			'id' => $i,
 			'title' => 'Event name '.$i,
-			'url' => Helper::url($id),
+			'url' => 'site web',
 			'class' => 'event-important',
 			'start' => strtotime($data).'000'
 	);
 }
 
 echo json_encode(array('success' => 1, 'result' => $out));
-exit;
+//exit;
 ?>
