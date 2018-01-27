@@ -28,7 +28,9 @@ exit;
 $out = array();
 
 for($i=1; $i<=15; $i++){ 	//from day 01 to day 15
-	$data = date('Y-m-d', strtotime("+".$i." days"));
+	$d = DateTime::createFromFormat('d-m-Y', '26-01-2018')+$i;
+	//echo $d->getTimestamp();
+	$data = $d->getTimestamp();
 	$out[] = array(
 			'id' => $i,
 			'title' => 'Event name '.$i,
