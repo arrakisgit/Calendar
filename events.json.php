@@ -26,10 +26,10 @@ exit;
 
 <?php*/
 $out = array();
-$d = DateTime::createFromFormat('d-m-Y', '26-01-2018');//+$i;
+//$d = mktime(0, 0, 0, date("m")-1, date("d"),   date("Y"));/+$i;
 for($i=1; $i<=15; $i++){ 
 	echo "tour : ".$i."<br/>";//from day 01 to day 15
-	$d=$d+$i;
+	$d = mktime(0, 0, 0, date("m"), date("d")+$i,   date("Y"));
 	echo $d->getTimestamp()."<br/>";
 	$data = $d->getTimestamp();
 	$out[] = array(
