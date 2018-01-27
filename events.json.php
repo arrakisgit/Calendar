@@ -1,77 +1,43 @@
-{
-	"success": 1,
-	"result": [
-		{
-			"id": "293",
-			"title": "This is warning class event with very long title to check how it fits to evet in day view",
-			"url": "http://www.example.com/",
-			"class": "event-warning",
-			"start": "1362938400000",
-			"end":   "1363197686300"
-		},
-		{
-			"id": "256",
-			"title": "Event that ends on timeline",
-			"url": "http://www.example.com/",
-			"class": "event-warning",
-			"start": "1363155300000",
-			"end":   "1363227600000"
-		},
-		{
-			"id": "276",
-			"title": "Short day event",
-			"url": "http://www.example.com/",
-			"class": "event-success",
-			"start": "1363245600000",
-			"end":   "1363252200000"
-		},
-		{
-			"id": "294",
-			"title": "This is information class ",
-			"url": "http://www.example.com/",
-			"class": "event-info",
-			"start": "1363111200000",
-			"end":   "1363284086400"
-		},
-		{
-			"id": "297",
-			"title": "This is success event",
-			"url": "http://www.example.com/",
-			"class": "event-success",
-			"start": "1363234500000",
-			"end":   "1363284062400"
-		},
-		{
-			"id": "54",
-			"title": "This is simple event",
-			"url": "http://www.example.com/",
-			"class": "",
-			"start": "1363712400000",
-			"end":   "1363716086400"
-		},
-		{
-			"id": "532",
-			"title": "This is inverse event",
-			"url": "http://www.example.com/",
-			"class": "event-inverse",
-			"start": "1364407200000",
-			"end":   "1364493686400"
-		},
-		{
-			"id": "548",
-			"title": "This is special event",
-			"url": "http://www.example.com/",
-			"class": "event-special",
-			"start": "1363197600000",
-			"end":   "1363629686400"
-		},
-		{
-			"id": "295",
-			"title": "Event 3",
-			"url": "http://www.example.com/",
-			"class": "event-important",
-			"start": "1364320800000",
-			"end":   "1364407286400"
-		}
-	]
+<?php
+/*$db    = new PDO('mysql:host=localhost;dbname=Calendar_db;charset=utf8', 'Client', 'customer');
+$start = $_REQUEST['from'] / 1000;
+$end   = $_REQUEST['to'] / 1000;
+$sql   = sprintf('SELECT * FROM events WHERE `datetime` BETWEEN %s and %s',
+    $db->quote(date('Y-m-d', $start)), $db->quote(date('Y-m-d', $end)));
+
+$out = array();
+foreach($db->query($sql) as $row) {
+    $out[] = array(
+        'id' => $row->id,
+        'title' => $row->name,
+        'url' => Helper::url($row->id),
+        'start' => strtotime($row->datetime) . '000',
+        'end' => strtotime($row->datetime_end) .'000'
+    );
 }
+
+echo json_encode(array('success' => 1, 'result' => $out));
+exit;
+
+
+//$d = DateTime::createFromFormat('d-m-Y', '22-09-2008');
+//echo $d->getTimestamp();
+
+
+<?php*/
+$out = array();
+
+for($i=1; $i<=15; $i++){ 	//from day 01 to day 15
+	$data = date('Y-m-d', strtotime("+".$i." days"));
+	$out[] = array(
+			'id' => $i,
+			'title' => 'Event name '.$i,
+			'url' => Helper::url($id),
+			'class' => 'event-important',
+			'start' => strtotime($data).'000'
+	);
+}
+
+echo json_encode(array('success' => 1, 'result' => $out));
+exit;
+?>
