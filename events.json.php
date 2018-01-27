@@ -38,7 +38,7 @@ for($i=1; $i<=15; $i++){
 			'title' => 'Event name '.$i,
 			'url' => 'site web',
 			'class' => 'event-important',
-			'start' => $data);//.'000'
+			'start' => strtotime($data).'000');//.'000'
 	//);
 }
 
