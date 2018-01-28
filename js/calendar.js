@@ -168,7 +168,7 @@ if(!String.prototype.formatNum) {
 			'11-11': "Armistie 14-18",
 			'08-06': "Armistie 39-45",
 			'01-06': "Fête du Travail",
-			'14-07': "Fête Nationale"
+			'14-07': "Fête Nationale",
 			'25-12': "Christmas"
 		}
 	};
