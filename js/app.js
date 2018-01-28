@@ -80,8 +80,8 @@
 		calendar.setOptions({weekbox: val});
 		calendar.view();
 	});
-	$('#events-modal .modal-header, #events-modal .modal-footer').click(function(){
-		alert('clicking');
+	$('#events-modal .modal-header, #events-modal .modal-footer').click(function(e){
+		//alert('clicking');
 		//e.stopPropagation();
 	});
 }(jQuery));
