@@ -28,6 +28,10 @@
 			if (this.getView()=='day'){
 				$('#rdvtxt').show();
 			}
+			else
+				{
+				$('#rdvtxt').hide();
+				}
 		},
 		classes: {
 			months: {
@@ -35,7 +39,7 @@
 			}
 		}
 	};
-	$('#rdvtxt').hide();
+	
 	var calendar = $('#calendar').calendar(options);
 
 	$('.btn-group button[data-calendar-nav]').each(function() {
