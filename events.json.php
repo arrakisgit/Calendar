@@ -24,7 +24,7 @@ $ts_end=mktime(0, 30, 15, 1, 25,2018);
 
 	$out[] = array(
 			'id' => 1,
-			'title' => 'Event name ',
+			'title' => 'RDV prefecture avec mon pti coeur',
 			'url' => 'site web',
 			'class' => 'event-important',
 			'start' => $ts_start.'000',
