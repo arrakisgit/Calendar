@@ -1,10 +1,4 @@
-/**
- * Bootstrap based calendar full view.
- *
- * https://github.com/Serhioromano/bootstrap-calendar
- *
- * User: Sergey Romanov <serg4172@mail.ru>
- */
+
 "use strict";
 
 Date.prototype.getWeek = function(iso8601) {
@@ -170,49 +164,35 @@ if(!String.prototype.formatNum) {
 		first_day: 2,
 		week_numbers_iso_8601: false,
 		holidays: {
-			// January 1
-			'01-01': "New Year's Day",
-			// Third (+3*) Monday (1) in January (01)
-			'01+3*1': "Birthday of Dr. Martin Luther King, Jr.",
-			// Third (+3*) Monday (1) in February (02)
-			'02+3*1': "Washington's Birthday",
-			// Last (-1*) Monday (1) in May (05)
-			'05-1*1': "Memorial Day",
-			// July 4
-			'04-07': "Independence Day",
-			// First (+1*) Monday (1) in September (09)
-			'09+1*1': "Labor Day",
-			// Second (+2*) Monday (1) in October (10)
-			'10+2*1': "Columbus Day",
-			// November 11
-			'11-11': "Veterans Day",
-			// Fourth (+4*) Thursday (4) in November (11)
-			'11+4*4': "Thanksgiving Day",
-			// December 25
+			'01-01': "Nouvelle Année",
+			'11-11': "Armistie 14-18",
+			'08-06': "Armistie 39-45",
+			'01-06': "Fête du Travail",
+			'14-07': "Fête Nationale"
 			'25-12': "Christmas"
 		}
 	};
 
 	var strings = {
-		error_noview: 'Calendar: View {0} not found',
-		error_dateformat: 'Calendar: Wrong date format {0}. Should be either "now" or "yyyy-mm-dd"',
-		error_loadurl: 'Calendar: Event URL is not set',
-		error_where: 'Calendar: Wrong navigation direction {0}. Can be only "next" or "prev" or "today"',
-		error_timedevide: 'Calendar: Time split parameter should divide 60 without decimals. Something like 10, 15, 30',
+		error_noview: 'Calendrier: Vue {0} non trouvé',
+		error_dateformat: 'Calendrier: Mauvais format de date {0}. Le format valide est "aaaa-mm-jj"',
+		error_loadurl: 'Calendrier: URL de l evenement est non presente',
+		error_where: 'Calendrier: Mauvaise navigation {0}. les directions possible sont "Suivant", "Precedent" ou "Aujourd hui"',
+		error_timedevide: 'Calendrier: les heures doivent être divisable par 60.',
 
-		no_events_in_day: 'No events in this day.',
+		no_events_in_day: 'Pas d evenement aujourd hui.',
 
 		title_year: '{0}',
 		title_month: '{0} {1}',
-		title_week: 'week {0} of {1}',
+		title_week: 'Semaine {0} de {1}',
 		title_day: '{0} {1} {2}, {3}',
 
-		week: 'Week {0}',
-		all_day: 'All day',
-		time: 'Time',
-		events: 'Events',
-		before_time: 'Ends before timeline',
-		after_time: 'Starts after timeline',
+		week: 'Semaine {0}',
+		all_day: 'Toute la jonnée',
+		time: 'Heure',
+		events: 'Evenementts',
+		before_time: 'Termine avant le chronogramme',
+		after_time: 'Commence après le chronogramme',
 
 		m0: 'Janvier',
 		m1: 'Fevrier',
