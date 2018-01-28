@@ -25,6 +25,9 @@
 			$('.page-header h3').text(this.getTitle());
 			$('.btn-group button').removeClass('active');
 			$('button[data-calendar-view="' + view + '"]').addClass('active');
+			if (this.getView()=='day'){
+				$(this).next().toggle();
+			}
 		},
 		classes: {
 			months: {
@@ -32,7 +35,7 @@
 			}
 		}
 	};
-
+	$(".hidden").hide();
 	var calendar = $('#calendar').calendar(options);
 
 	$('.btn-group button[data-calendar-nav]').each(function() {

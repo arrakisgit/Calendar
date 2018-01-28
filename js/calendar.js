@@ -882,7 +882,11 @@ if(!String.prototype.formatNum) {
 		}
 		return;
 	};
-
+	
+	Calendar.prototype.getView = function() {
+		return this.options.view;
+	};
+	
 	Calendar.prototype.getYear = function() {
 		var p = this.options.position.start;
 		return p.getFullYear();
