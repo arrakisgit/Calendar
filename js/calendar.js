@@ -188,7 +188,7 @@ if(!String.prototype.formatNum) {
 		title_day: '{0} {1} {2}, {3}',
 
 		week: 'Semaine {0}',
-		all_day: 'Toute la jonnée',
+		all_day: 'Toute la journée',
 		time: 'Heure',
 		events: 'Evenementts',
 		before_time: 'Termine avant le chronogramme',
