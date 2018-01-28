@@ -15,38 +15,13 @@ foreach($db->query($sql) as $row) {
         'end' => strtotime($row->datetime_end) .'000'
     );
 }
-
-echo json_encode(array('success' => 1, 'result' => $out));
-exit;
-
-
-$d = DateTime::createFromFormat('d-m-Y', '22-09-2008');
-//echo $d->getTimestamp();
-
-
-<?php*/
+*/
 $out = array();
-$today = new DateTime(date('2018-01-27'));
-$appt  = new DateTime(date('2017-12-31'));
-$d_Ecart= $appt->diff($today)->days;
-//$d_Start = DateTime::createFromFormat('d-m-Y', '31-12-2017');
-//$d_Event = DateTime::createFromFormat('d-m-Y', '27-01-2018');
-//$d_Ecart=$d_Event-$d_Start;
-//$d_Ecart_Start=$d_Ecart*(24*60*60)+(14*3600);
-//$d_Ecart_End=$d_Ecart*(24*60*60)+(15*3600);
+
 
 $ts_start= mktime(0, 0, 14, 1, 25,2018);
 $ts_end=mktime(0, 30, 15, 1, 25,2018);
-//$ts = 1171502725;
-//$date = new DateTime("@$ts");
-//echo $date->format('U = Y-m-d H:i:s') . "\n";
 
-
-//for($i=1; $i<=15; $i++){ 
-	//echo "tour : ".$i."<br/>";//from day 01 to day 15
-	//$d = mktime(0, 0, 14, date("m"), date("d")+$i,   date("Y"));
-	//echo $d->getTimestamp()."<br/>";
-	//$data = $d->getTimestamp();
 	$out[] = array(
 			'id' => 1,
 			'title' => 'Event name ',
@@ -54,10 +29,8 @@ $ts_end=mktime(0, 30, 15, 1, 25,2018);
 			'class' => 'event-important',
 			'start' => $ts_start.'000',
 			'end' => $ts_end.'000'
-	);//.'000'
-	//);
-//}
+	);
 
 echo json_encode(array('success' => 1, 'result' => $out));
-//exit;
+
 ?>
