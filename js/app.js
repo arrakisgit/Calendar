@@ -26,7 +26,7 @@
 			$('.btn-group button').removeClass('active');
 			$('button[data-calendar-view="' + view + '"]').addClass('active');
 			if (this.getView()=='day'){
-				$(".hidden").show();
+				$('#rdvtxt').show();
 			}
 		},
 		classes: {
@@ -35,7 +35,7 @@
 			}
 		}
 	};
-	//$(".hidden").hide();
+	//$('#rdvtxt').hide();
 	var calendar = $('#calendar').calendar(options);
 
 	$('.btn-group button[data-calendar-nav]').each(function() {
