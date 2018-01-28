@@ -26,7 +26,7 @@ $d = DateTime::createFromFormat('d-m-Y', '22-09-2008');
 
 <?php*/
 $out = array();
-$d_Start = DateTime::createFromFormat('d-m-Y', '01-01-2018');
+$d_Start = DateTime::createFromFormat('d-m-Y', '31-12-2017');
 $d_Event = DateTime::createFromFormat('d-m-Y', '27-01-2018');
 $d_Ecart=$d_Event-$d_Start;
 $d_Ecart_Start=$d_Ecart*(24*60*60)+(14*3600);
