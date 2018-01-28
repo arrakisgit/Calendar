@@ -29,7 +29,8 @@ $out = array();
 $d_Start = DateTime::createFromFormat('d-m-Y', '01-01-2018');
 $d_Event = DateTime::createFromFormat('d-m-Y', '27-01-2018');
 $d_Ecart=$d_Event-$d_Start;
-$d_Ecart=$d_Ecart*(24*60*60)+(14*3600);
+$d_Ecart_Start=$d_Ecart*(24*60*60)+(14*3600);
+$d_Ecart_End=$d_Ecart*(24*60*60)+(15*3600);
 
 //for($i=1; $i<=15; $i++){ 
 	//echo "tour : ".$i."<br/>";//from day 01 to day 15
@@ -38,10 +39,12 @@ $d_Ecart=$d_Ecart*(24*60*60)+(14*3600);
 	//$data = $d->getTimestamp();
 	$out[] = array(
 			'id' => 1,
-			'title' => 'Event name '.$i,
+			'title' => 'Event name ',
 			'url' => 'site web',
 			'class' => 'event-important',
-			'start' => $d_Ecart."000");//.'000'
+			'start' => $d_Ecart_Start."000",
+			'end' => $d_Ecart_End."000"
+	);//.'000'
 	//);
 //}
 
