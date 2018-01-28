@@ -30,7 +30,7 @@
 			}
 			else
 				{
-				$('rdv').hide();
+				$('.rdv').hide();
 				}
 		},
 		classes: {
