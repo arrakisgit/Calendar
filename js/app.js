@@ -26,11 +26,11 @@
 			$('.btn-group button').removeClass('active');
 			$('button[data-calendar-view="' + view + '"]').addClass('active');
 			if (this.getView()=='day'){
-				$('#rdvtxt').show();
+				$('.rdv').show();
 			}
 			else
 				{
-				$('#rdvtxt').hide();
+				$('rdv').hide();
 				}
 		},
 		classes: {
