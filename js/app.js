@@ -26,7 +26,7 @@
 			$('.btn-group button').removeClass('active');
 			$('button[data-calendar-view="' + view + '"]').addClass('active');
 			if (this.getView()=='day'){
-				$(this).next().toggle();
+				$(".hidden").show();
 			}
 		},
 		classes: {
