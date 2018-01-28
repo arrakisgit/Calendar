@@ -19,12 +19,12 @@ foreach($db->query($sql) as $row) {
 $out = array();
 
 
-$ts_start= mktime(0, 0, 14, 1, 25,2018);
-$ts_end=mktime(0, 30, 15, 1, 25,2018);
+$ts_start= mktime(0, 0, 14, 1, 22,2018);
+$ts_end=mktime(0, 30, 15, 1, 22,2018);
 
 	$out[] = array(
 			'id' => 1,
-			'title' => 'RDV prefecture avec mon pti coeur',
+			'title' => 'Mon Anniversaire',
 			'url' => 'site web',
 			'class' => 'event-important',
 			'start' => $ts_start.'000',
