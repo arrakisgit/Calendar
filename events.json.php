@@ -52,8 +52,8 @@ $ts_end=mktime(0, 30, 15, 1, 25,2018);
 			'title' => 'Event name ',
 			'url' => 'site web',
 			'class' => 'event-important',
-			'start' => $ts_start,
-			'end' => $ts_end
+			'start' => $ts_start.'000',
+			'end' => $ts_end.'000'
 	);//.'000'
 	//);
 //}
