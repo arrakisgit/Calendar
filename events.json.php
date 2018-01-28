@@ -26,9 +26,12 @@ $d = DateTime::createFromFormat('d-m-Y', '22-09-2008');
 
 <?php*/
 $out = array();
-$d_Start = DateTime::createFromFormat('d-m-Y', '31-12-2017');
-$d_Event = DateTime::createFromFormat('d-m-Y', '27-01-2018');
-$d_Ecart=$d_Event-$d_Start;
+$today = new DateTime(date('2018-01-27'));
+$appt  = new DateTime(date('2017-12-31'));
+$d_Ecart= $appt->diff($today)->days;
+//$d_Start = DateTime::createFromFormat('d-m-Y', '31-12-2017');
+//$d_Event = DateTime::createFromFormat('d-m-Y', '27-01-2018');
+//$d_Ecart=$d_Event-$d_Start;
 $d_Ecart_Start=$d_Ecart*(24*60*60)+(14*3600);
 $d_Ecart_End=$d_Ecart*(24*60*60)+(15*3600);
 
