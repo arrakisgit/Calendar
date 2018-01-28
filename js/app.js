@@ -35,7 +35,7 @@
 			}
 		}
 	};
-	$(".hidden").hide();
+	//$(".hidden").hide();
 	var calendar = $('#calendar').calendar(options);
 
 	$('.btn-group button[data-calendar-nav]').each(function() {
