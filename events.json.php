@@ -32,8 +32,15 @@ $d_Ecart= $appt->diff($today)->days;
 //$d_Start = DateTime::createFromFormat('d-m-Y', '31-12-2017');
 //$d_Event = DateTime::createFromFormat('d-m-Y', '27-01-2018');
 //$d_Ecart=$d_Event-$d_Start;
-$d_Ecart_Start=$d_Ecart*(24*60*60)+(14*3600);
-$d_Ecart_End=$d_Ecart*(24*60*60)+(15*3600);
+//$d_Ecart_Start=$d_Ecart*(24*60*60)+(14*3600);
+//$d_Ecart_End=$d_Ecart*(24*60*60)+(15*3600);
+
+$ts_start= mktime(0, 0, 14, 1, 25,2018);
+$ts_end=mktime(0, 30, 15, 1, 25,2018);
+//$ts = 1171502725;
+//$date = new DateTime("@$ts");
+//echo $date->format('U = Y-m-d H:i:s') . "\n";
+
 
 //for($i=1; $i<=15; $i++){ 
 	//echo "tour : ".$i."<br/>";//from day 01 to day 15
@@ -45,8 +52,8 @@ $d_Ecart_End=$d_Ecart*(24*60*60)+(15*3600);
 			'title' => 'Event name ',
 			'url' => 'site web',
 			'class' => 'event-important',
-			'start' => $d_Ecart_Start."000",
-			'end' => $d_Ecart_End."000"
+			'start' => $ts_start,
+			'end' => $ts_end
 	);//.'000'
 	//);
 //}
