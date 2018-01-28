@@ -185,12 +185,12 @@ if(!String.prototype.formatNum) {
 		title_year: '{0}',
 		title_month: '{0} {1}',
 		title_week: 'Semaine {0} de {1}',
-		title_day: '{0} {1} {2}, {3}',
+		title_day: '{0} {1} {2} {3}',
 
 		week: 'Semaine {0}',
 		all_day: 'Toute la journée',
 		time: 'Heure',
-		events: 'Evenementts',
+		events: 'Evenements',
 		before_time: 'Termine avant le chronogramme',
 		after_time: 'Commence après le chronogramme',
 
@@ -374,7 +374,7 @@ if(!String.prototype.formatNum) {
 	function Calendar(params, context) {
 		this.options = $.extend(true, {position: {start: new Date(), end: new Date()}}, defaults, params);
 		this.setLanguage(this.options.language);
-		this.context = context;
+		this.context = "uuu" + context;
 
 		context.css('width', this.options.width).addClass('cal-context');
 
