@@ -374,7 +374,7 @@ if(!String.prototype.formatNum) {
 	function Calendar(params, context) {
 		this.options = $.extend(true, {position: {start: new Date(), end: new Date()}}, defaults, params);
 		this.setLanguage(this.options.language);
-		this.context = "uuu" + context;
+		this.context = context;
 
 		context.css('width', this.options.width).addClass('cal-context');
 
