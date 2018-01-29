@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Minimum Setup</title>
+		<title>Remind Me - Calendrier</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="components/bootstrap3/css/bootstrap.css">
 		<link rel="stylesheet" href="components/bootstrap3/css/bootstrap-theme.css">
