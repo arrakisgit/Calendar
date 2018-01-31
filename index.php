@@ -155,9 +155,10 @@
 						</div>
 						</form>
 					</div>
-
+			<div>
 			<h4>Evenements</h4>
 			<ul id="eventlist" class="nav nav-list"></ul>
+			</div>
 			</div>
 		</div>
 		<div class="clearfix"></div>
