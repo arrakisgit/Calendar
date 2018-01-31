@@ -146,7 +146,7 @@
 						</label>
 						<div class="btn-rdv">
 							<div class="btn-group">
-							<button class="btn btn-primary">Enregistrer</button>
+							<button class="btn btn-primary" id="btn_save_event">Enregistrer</button>
 							</div>
 						</div>
 						</div>

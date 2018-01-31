@@ -56,10 +56,7 @@
 		});
 	});
 
-	$('.btn-group button[data-event-save]').each(function(){
-		var $this = $(this);
-		$this.click(function(){
-			alert('coucou');
+	$('#btn_save_event').click(function(){
 			$startHour=$("#hoursstart option:selected").val();
 			$startMinute=$("#hoursend option:selected").val();
 			$endHour=$("#minutesstart option:selected").val();
