@@ -1164,7 +1164,7 @@ if(!String.prototype.formatNum) {
 			$('div.cal-cell1').removeClass('day-highlight dh-' + $(this).data('event-class'));
 		});
 	};
-
+	//Calendar.prototype.navigate = function(where, next) {
 	Calendar.prototype._update_month_year = function() {
 		if(!this.options.views[this.options.view].slide_events) {
 			return;
