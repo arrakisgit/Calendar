@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>Remind Me - Calendrier</title>
@@ -60,19 +59,16 @@
 				<div class="col-md-3">
 				
 					<div class="row">
-						<div class="rdv">
-						
 						<select id="first_day" class="form-control">
 							<option value="2">La semaine commence le Dimanche</option>
 							<option value="1" selected="selected">La semaine commence le lundi</option>
 						</select>
-						
-						<h4>Créer un Evenement</h4>
-						<form name="frm_rdv" class="form-control">
-						<div>
-						<label>
+						<h4 class="rdv">Créer un Evenement</h4>
+						<div class="rdv">
+						<form name="frm_rdv" method="POST">
+						<label class="rdv">
 							<h5>Heure de début</h5>
-							<select id="hoursstart" name="debutselheure">
+							<select id="hoursStart" name="debutselheure">
 							<option value="00" selected="selected">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -98,12 +94,12 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						<select id="minutestart" name="debutselmin">
+						<select id="minuteStart" name="debutselmin">
 							<option value="00" selected="selected">00</option>
 							<option value="30">30</option>
 						</select>
 						<h5>Heure de fin</h5>
-							<select id="hoursend" name="finselheure">
+							<select id="hoursEnd" name="finselheure">
 							<option value="00" selected="selected">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -129,7 +125,7 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						<select id="minutesend" name="finselmin">
+						<select id="minuteEnd" name="finselmin">
 							<option value="00" selected="selected">00</option>
 							<option value="30">30</option>
 						</select>
@@ -144,28 +140,42 @@
 						<option value="event-special">Spécial</option>
 						</select>
 						</div>
-						<label>
+						<label class="rdv">
 							<h5>Titre </h5>
 							<input type="text" id="rdvtitle"> 
 						</label>
 						<div class="btn-rdv">
 							<div class="btn-group">
-							<button class="btn btn-primary" data-event-save="save">Enregistrer</button>
+							<button class="btn btn-primary">Enregistrer</button>
 							</div>
-						</div>
 						</div>
 						</div>
 						</form>
 					</div>
-			<div>
+
 			<h4>Evenements</h4>
 			<ul id="eventlist" class="nav nav-list"></ul>
-			</div>
 			</div>
 		</div>
 		<div class="clearfix"></div>
 		<br><br>
-
+		<div id="disqus_thread"></div>
+	
+		<div class="modal fade" id="events-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3 class="modal-title">Event</h3>
+					</div>
+					<div class="modal-body" style="height: 400px">
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 			<script type="text/javascript" src="components/jquery/jquery.min.js"></script>
 			<script type="text/javascript" src="components/underscore/underscore-min.js"></script>
 			<script type="text/javascript" src="js/calendar.js"></script>
