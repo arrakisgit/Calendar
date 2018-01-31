@@ -56,7 +56,7 @@
 		});
 	});
 
-	$('#btn_save_event').click(function(){
+	$('#btn_save_event').click(function(event){
 			$startHour=$("#hoursstart option:selected").val();
 			$startMinute=$("#hoursend option:selected").val();
 			$endHour=$("#minutesstart option:selected").val();
