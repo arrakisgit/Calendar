@@ -15,7 +15,7 @@ class Listener
 		switch ($this->action)
 		{
 			case 'insertEvent':
-				InsertionEvent();
+				$this->InsertionEvent();
 				break;
 			
 		}
