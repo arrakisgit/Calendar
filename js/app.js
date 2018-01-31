@@ -68,7 +68,7 @@
 			$selectedMonth=this.getMonth();
 			$selectedYear=this.getYear();
 			$titleEvent=$("#rdvtitle").val();
-			$.post( "/listener.php", { action: "insertEvent", selectedday: $selectedDay, selectedmonth: $selectedMonth, selectedyear: $selectedYear, starthour: $startHour, startminute: $startMinute, endhour: $endHour, endminute: $endMinute});
+			$.post( "/listener.php", {action: "insertEvent", eventtype: $eventtype, title: $titleEvent, selectedday: $selectedDay, selectedmonth: $selectedMonth, selectedyear: $selectedYear, starthour: $startHour, startminute: $startMinute, endhour: $endHour, endminute: $endMinute});
 			
 		});
 	});

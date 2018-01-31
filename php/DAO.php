@@ -14,14 +14,14 @@ class DAO
 		
 	}
 	
-	public function Insert_Event($title,$start_date,$start_hour,$start_minute,$end_date,$end_hour,$end_minute,$event_class)
+	public function Insert_Event($title,$timestampstart,$timestampend,$event_class)
 	{
 		if ($this->db==null)
 		{
 			Connexion();
 		}
 		
-		$req=$this->db->prepare("INSERT INTO T_Events (ID,TITLE,URL,CLASS,START_DATE,START_HOURS,START_MINUTES,END_DATE,END_HOURS,END_MINUTES) VALUES (NULL,'".$title."','url_event','".$event_class."',#".$start_date."#,".$start_hour.",".$start_minute.",#".$end_date."#,".$end_hour.",".$end_minute.")");
+		$req=$this->db->prepare("INSERT INTO T_Events (ID,TITLE,URL,CLASS,START_DATE,END_DATE) VALUES (NULL,'".$title."','url_event','".$event_class."',".$timestampstart.",".$timestampend.")");
 		$req->execute();
 	}
 }
