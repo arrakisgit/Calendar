@@ -25,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active">
-              <a href="#">Acceuil</a>
+              <a href="#">Accueil</a>
             </li>
             <li>
               <a href="#">Contacts</a>
@@ -131,6 +131,7 @@
 							<option value="30">30</option>
 						</select>
 						</label>
+						<h5>Type d'évènement</h5>
 						<div id="typeevent">
 						<select id="eventtype" name="eventype">
 						<option value="event-import">Important</option>
