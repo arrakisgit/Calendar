@@ -69,7 +69,7 @@
 			$.post("php/listener.php", {action: "insertEvent", eventtype: $eventtype, title: $titleEvent, selectedday: $selectedDay, selectedmonth: $selectedMonth, selectedyear: $selectedYear, starthour: $startHour, startminute: $startMinute, endhour: $endHour, endminute: $endMinute});
 			
 		});
-	});
+
 	$('#first_day').change(function(){
 		var value = $(this).val();
 		value = value.length ? parseInt(value) : null;
