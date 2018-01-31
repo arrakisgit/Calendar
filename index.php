@@ -60,13 +60,12 @@
 				<div class="col-md-3">
 				
 					<div class="row">
-						<div class="hideit">
+						<div class="rdv">
 						<select id="first_day" class="form-control">
 							<option value="2">La semaine commence le Dimanche</option>
 							<option value="1" selected="selected">La semaine commence le lundi</option>
 						</select>
-						</div>
-						<div class="rdv">
+						
 						<h4>Créer un Evenement</h4>
 						<form name="frm_rdv" class="form-control">
 						<label>
