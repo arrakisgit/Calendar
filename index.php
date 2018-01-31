@@ -60,16 +60,16 @@
 				<div class="col-md-3">
 				
 					<div class="row">
-			
+						<div class="rdv">
 						<select id="first_day" class="form-control">
 							<option value="2" selected="selected">La semaine commence le Dimanche</option>
 							<option value="1">La semaine commence le lundi</option>
 						</select>
 						<h4 class="rdv">Créer un Evenement</h4>
-						
+						<form name="frm_rdv" method="POST" action="listener.php">
 						<label class="rdv">
 							<h5>Heure de début</h5>
-							<select id="hoursStart">
+							<select id="hoursStart" name="debutselheure">
 							<option value="00" selected="selected">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -95,12 +95,12 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						<select id="minuteStart">
+						<select id="minuteStart" name="debutselmin">
 							<option value="00" selected="selected">00</option>
 							<option value="30">30</option>
 						</select>
 						<h5>Heure de fin</h5>
-							<select id="hoursEnd">
+							<select id="hoursEnd" name="finselheure">
 							<option value="00" selected="selected">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -126,20 +126,31 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						<select id="minuteEnd">
+						<select id="minuteEnd" name="finselmin">
 							<option value="00" selected="selected">00</option>
 							<option value="30">30</option>
 						</select>
 						</label>
+						<div id="typeevent">
+						<select id="eventtype" name="eventype">
+						<option value="event-import">Important</option>
+						<option value="event-success">Succès</option> 
+						<option value="event-warning">Alerte</option>
+						<option value="event-info">Info</option>
+						<option value="event-special">Spécial</option>
+						</select>
+						</div>
 						<label class="rdv">
 							<h5>Titre </h5>
 							<input type="text" id="rdvtitle"> 
 						</label>
-						<div class="rdv">
+						<div class="btn-rdv">
 							<div class="btn-group">
 							<button class="btn btn-primary">Enregistrer</button>
 							</div>
 						</div>
+						</div>
+						</form>
 					</div>
 
 			<h4>Evenements</h4>
