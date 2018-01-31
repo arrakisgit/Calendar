@@ -10,7 +10,7 @@ class DAO
 	
 	public function Connexion()
 	{
-		$this->db=new PDO('mysql:host=localhost;dbname=Calendar_db;charset=utf8', 'Client', 'customer');
+		$this->db=new PDO('mysql:host=localhost;dbname=Calendar_db;charset=utf8', 'root', 'root');
 		
 	}
 	
