@@ -61,6 +61,7 @@
 				
 					<div class="row">
 						<div class="rdv">
+						
 						<select id="first_day" class="form-control">
 							<option value="2">La semaine commence le Dimanche</option>
 							<option value="1" selected="selected">La semaine commence le lundi</option>
@@ -68,6 +69,7 @@
 						
 						<h4>Créer un Evenement</h4>
 						<form name="frm_rdv" class="form-control">
+						<div>
 						<label>
 							<h5>Heure de début</h5>
 							<select id="hoursstart" name="debutselheure">
@@ -150,6 +152,7 @@
 							<div class="btn-group">
 							<button class="btn btn-primary" data-event-save="save">Enregistrer</button>
 							</div>
+						</div>
 						</div>
 						</div>
 						</form>
