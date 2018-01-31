@@ -65,7 +65,7 @@
 						</select>
 						<h4 class="rdv">Créer un Evenement</h4>
 						<div class="rdv">
-						<form name="frm_rdv" method="POST" action="/">
+						<form name="frm_rdv" method="POST" action="php/listener.php">
 						<label class="rdv">
 							<h5>Heure de début</h5>
 							<select id="hoursStart" name="debutselheure">
