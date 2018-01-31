@@ -48,7 +48,7 @@
 			calendar.navigate($this.data('calendar-nav'));
 		});
 	});
-
+	$('.form-control').hide();
 	$('.btn-group button[data-calendar-view]').each(function() {
 		var $this = $(this);
 		$this.click(function() {

@@ -69,7 +69,7 @@
 						<form name="frm_rdv" method="POST" action="listener.php">
 						<label class="rdv">
 							<h5>Heure de début</h5>
-							<select id="hoursStart" name="debutselheure" class="form-control">
+							<select id="hoursStart" name="debutselheure">
 							<option value="00" selected="selected">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -95,12 +95,12 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						<select id="minuteStart" name="debutselmin" class="form-control">
+						<select id="minuteStart" name="debutselmin">
 							<option value="00" selected="selected">00</option>
 							<option value="30">30</option>
 						</select>
 						<h5>Heure de fin</h5>
-							<select id="hoursEnd" name="finselheure" class="form-control">
+							<select id="hoursEnd" name="finselheure">
 							<option value="00" selected="selected">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -126,13 +126,13 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						<select id="minuteEnd" name="finselmin" class="form-control">
+						<select id="minuteEnd" name="finselmin">
 							<option value="00" selected="selected">00</option>
 							<option value="30">30</option>
 						</select>
 						</label>
 						<div id="typeevent">
-						<select id="eventtype" name="eventype" class="form-control">
+						<select id="eventtype" name="eventype">
 						<option value="event-import">Important</option>
 						<option value="event-success">Succès</option> 
 						<option value="event-warning">Alerte</option>
