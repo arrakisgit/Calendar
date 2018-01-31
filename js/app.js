@@ -48,7 +48,7 @@
 			calendar.navigate($this.data('calendar-nav'));
 		});
 	});
-	$('.form-control').hide();
+	
 	$('.btn-group button[data-calendar-view]').each(function() {
 		var $this = $(this);
 		$this.click(function() {
@@ -56,6 +56,22 @@
 		});
 	});
 
+	$('.btn-group button[data-event-save]').each(function(){
+		var $this = $(this);
+		$this.click(function(){
+			$startHour=$("#hoursstart option:selected").val();
+			$startMinute=$("#hoursend option:selected").val();
+			$endHour=$("#minutesstart option:selected").val();
+			$endMinute=$("#minutesend option:selected").val();
+			$eventtype=$("#eventtype option:selected").val();
+			$selectedDay=this.getDay();
+			$selectedMonth=this.getMonth();
+			$selectedYear=this.getYear();
+			$titleEvent=$("#rdvtitle").val();
+			$.post( "/listener.php", { action: "insertEvent", selectedday: $selectedDay, selectedmonth: $selectedMonth, selectedyear: $selectedYear, starthour: $startHour, startminute: $startMinute, endhour: $endHour, endminute: $endMinute});
+			
+		});
+	});
 	$('#first_day').change(function(){
 		var value = $(this).val();
 		value = value.length ? parseInt(value) : null;

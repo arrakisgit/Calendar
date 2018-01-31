@@ -901,7 +901,7 @@ if(!String.prototype.formatNum) {
 		var p = this.options.position.start;
 		return this.locale['d' + p.getDay()];
 	};
-
+	
 	Calendar.prototype.isToday = function() {
 		var now = new Date().getTime();
 
