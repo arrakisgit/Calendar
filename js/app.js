@@ -59,6 +59,7 @@
 	$('.btn-group button[data-event-save]').each(function(){
 		var $this = $(this);
 		$this.click(function(){
+			alert('coucou');
 			$startHour=$("#hoursstart option:selected").val();
 			$startMinute=$("#hoursend option:selected").val();
 			$endHour=$("#minutesstart option:selected").val();
@@ -68,7 +69,7 @@
 			$selectedMonth=this.getMonth();
 			$selectedYear=this.getYear();
 			$titleEvent=$("#rdvtitle").val();
-			$.post( "/listener.php", {action: "insertEvent", eventtype: $eventtype, title: $titleEvent, selectedday: $selectedDay, selectedmonth: $selectedMonth, selectedyear: $selectedYear, starthour: $startHour, startminute: $startMinute, endhour: $endHour, endminute: $endMinute});
+			$.post("/listener.php", {action: "insertEvent", eventtype: $eventtype, title: $titleEvent, selectedday: $selectedDay, selectedmonth: $selectedMonth, selectedyear: $selectedYear, starthour: $startHour, startminute: $startMinute, endhour: $endHour, endminute: $endMinute});
 			
 		});
 	});
