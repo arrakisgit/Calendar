@@ -18,7 +18,7 @@ class DAO
 	{
 		if ($this->db==null)
 		{
-			Connexion();
+			$this->Connexion();
 		}
 		
 		$req=$this->db->prepare("INSERT INTO T_Events (ID,TITLE,URL,CLASS,START_DATE,END_DATE) VALUES (NULL,'".$title."','url_event','".$event_class."',".$timestampstart.",".$timestampend.")");
