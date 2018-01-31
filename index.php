@@ -145,7 +145,7 @@
 							<input type="text" id="rdvtitle"> 
 						</label>
 						<div class="btn-rdv">
-							<div class="btn-group">
+							<div class="btn-group-save">
 							<button class="btn btn-primary" id="btn_save_event">Enregistrer</button>
 							</div>
 						</div>
