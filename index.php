@@ -60,16 +60,16 @@
 				<div class="col-md-3">
 				
 					<div class="row">
-						<div class="rdv">
 						<select id="first_day" class="form-control">
-							<option value="2" selected="selected">La semaine commence le Dimanche</option>
-							<option value="1">La semaine commence le lundi</option>
+							<option value="2">La semaine commence le Dimanche</option>
+							<option value="1" selected="selected">La semaine commence le lundi</option>
 						</select>
 						<h4 class="rdv">Créer un Evenement</h4>
+						<div class="rdv">
 						<form name="frm_rdv" method="POST" action="listener.php">
 						<label class="rdv">
 							<h5>Heure de début</h5>
-							<select id="hoursStart" name="debutselheure">
+							<select id="hoursStart" name="debutselheure" class="form-control">
 							<option value="00" selected="selected">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -95,12 +95,12 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						<select id="minuteStart" name="debutselmin">
+						<select id="minuteStart" name="debutselmin" class="form-control">
 							<option value="00" selected="selected">00</option>
 							<option value="30">30</option>
 						</select>
 						<h5>Heure de fin</h5>
-							<select id="hoursEnd" name="finselheure">
+							<select id="hoursEnd" name="finselheure" class="form-control">
 							<option value="00" selected="selected">00</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
@@ -126,13 +126,13 @@
 							<option value="22">22</option>
 							<option value="23">23</option>
 						</select>
-						<select id="minuteEnd" name="finselmin">
+						<select id="minuteEnd" name="finselmin" class="form-control">
 							<option value="00" selected="selected">00</option>
 							<option value="30">30</option>
 						</select>
 						</label>
 						<div id="typeevent">
-						<select id="eventtype" name="eventype">
+						<select id="eventtype" name="eventype" class="form-control">
 						<option value="event-import">Important</option>
 						<option value="event-success">Succès</option> 
 						<option value="event-warning">Alerte</option>
