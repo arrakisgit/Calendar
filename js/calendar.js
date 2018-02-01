@@ -806,7 +806,7 @@ if(!String.prototype.formatNum) {
 		} else if(where == 'today') {
 			to.start.setTime(new Date().getTime());
 		}else if(where == 'save') {
-			alert('ok');
+			/*alert('ok');
 			startHour=$("#hoursstart option:selected").val();
 			alert(startHour);
 			startMinute=$("#hoursend option:selected").val();
@@ -816,8 +816,8 @@ if(!String.prototype.formatNum) {
 			selectedDay=this.getDay();
 			selectedMonth=this.getMonth();
 			selectedYear=this.getYear();
-			titleEvent=$("#rdvtitle").val();
-			$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute});
+			titleEvent=$("#rdvtitle").val();*/
+			//$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute});
 		}
 		else {
 			$.error(this.locale.error_where.format(where))
