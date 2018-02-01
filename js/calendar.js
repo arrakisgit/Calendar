@@ -1002,7 +1002,7 @@ if(!String.prototype.formatNum) {
 			return;
 		}
 		var self = this;
-		alert(name);
+	
 		$.ajax({
 			url: self._templatePath(name),
 			dataType: 'html',

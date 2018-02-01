@@ -56,9 +56,8 @@
 		});
 	});
 
-	$('#btn_save_event').each(function(){
-			var $this = $(this);
-			$this.click(function() {
+	$('#btn_save_event').click(function() {
+			alert('testa');
 			$startHour=$("#hoursstart option:selected").val();
 			$startMinute=$("#hoursend option:selected").val();
 			$endHour=$("#minutesstart option:selected").val();
@@ -71,7 +70,6 @@
 			$.post("php/listener.php", {action: "insertEvent", eventtype: $eventtype, title: $titleEvent, selectedday: $selectedDay, selectedmonth: $selectedMonth, selectedyear: $selectedYear, starthour: $startHour, startminute: $startMinute, endhour: $endHour, endminute: $endMinute});
 			});
 			
-		});
 
 	$('#first_day').change(function(){
 		var value = $(this).val();
