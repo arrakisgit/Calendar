@@ -45,9 +45,10 @@
 	$('.btn-group button[data-calendar-nav]').each(function() {
 		var $this = $(this);
 		$this.click(function() {
+			alert($this.data('calendar-nav'));
 			if ($this.data('calendar-nav')=='save')
 			{
-				alert($("#eventtype option:selected").val());
+				alert($("$('select[name=eventype]')").val());
 			}
 			else
 			{
