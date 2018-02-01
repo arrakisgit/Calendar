@@ -249,6 +249,7 @@ if(!String.prototype.formatNum) {
 			url += separator + key + '=' + encodeURIComponent(data[key]);
 			separator = '&';
 		}
+		alert(url);
 		return url;
 	}
 
@@ -949,7 +950,7 @@ if(!String.prototype.formatNum) {
 						if(browser_timezone.length) {
 							params.browser_timezone = browser_timezone;
 						}
-						alert('kkk');
+						//alert('kkk');
 						$.ajax({
 							url: buildEventsUrl(source, params),
 							dataType: 'json',
