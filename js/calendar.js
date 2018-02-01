@@ -808,6 +808,7 @@ if(!String.prototype.formatNum) {
 		}else if(where == 'save') {
 			alert('ok');
 			startHour=$("#hoursstart option:selected").val();
+			alert(startHour);
 			startMinute=$("#hoursend option:selected").val();
 			endHour=$("#minutesstart option:selected").val();
 			endMinute=$("#minutesend option:selected").val();
