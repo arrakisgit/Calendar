@@ -55,22 +55,7 @@
 			calendar.view($this.data('calendar-view'));
 		});
 	});
-
-	$('#btn_save_event').click(function() {
-			alert('testa');
-			$startHour=$("#hoursstart option:selected").val();
-			$startMinute=$("#hoursend option:selected").val();
-			$endHour=$("#minutesstart option:selected").val();
-			$endMinute=$("#minutesend option:selected").val();
-			$eventtype=$("#eventtype option:selected").val();
-			$selectedDay=this.getDay();
-			$selectedMonth=this.getMonth();
-			$selectedYear=this.getYear();
-			$titleEvent=$("#rdvtitle").val();
-			$.post("php/listener.php", {action: "insertEvent", eventtype: $eventtype, title: $titleEvent, selectedday: $selectedDay, selectedmonth: $selectedMonth, selectedyear: $selectedYear, starthour: $startHour, startminute: $startMinute, endhour: $endHour, endminute: $endMinute});
-			});
 			
-
 	$('#first_day').change(function(){
 		var value = $(this).val();
 		value = value.length ? parseInt(value) : null;

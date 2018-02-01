@@ -249,7 +249,7 @@ if(!String.prototype.formatNum) {
 			url += separator + key + '=' + encodeURIComponent(data[key]);
 			separator = '&';
 		}
-		alert(url);
+		//alert(url);
 		return url;
 	}
 
@@ -805,6 +805,17 @@ if(!String.prototype.formatNum) {
 			}
 		} else if(where == 'today') {
 			to.start.setTime(new Date().getTime());
+		}else if(where == 'save') {
+			startHour=$("#hoursstart option:selected").val();
+			startMinute=$("#hoursend option:selected").val();
+			endHour=$("#minutesstart option:selected").val();
+			endMinute=$("#minutesend option:selected").val();
+			eventtype=$("#eventtype option:selected").val();
+			selectedDay=this.getDay();
+			selectedMonth=this.getMonth();
+			selectedYear=this.getYear();
+			titleEvent=$("#rdvtitle").val();
+			$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute});
 		}
 		else {
 			$.error(this.locale.error_where.format(where))
