@@ -45,6 +45,7 @@
 	$('.btn-group button[data-calendar-nav]').each(function() {
 		var $this = $(this);
 		$this.click(function() {
+			alert('nav');
 			calendar.navigate($this.data('calendar-nav'));
 		});
 	});
