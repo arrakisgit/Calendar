@@ -949,7 +949,7 @@ if(!String.prototype.formatNum) {
 						if(browser_timezone.length) {
 							params.browser_timezone = browser_timezone;
 						}
-						
+						alert('kkk');
 						$.ajax({
 							url: buildEventsUrl(source, params),
 							dataType: 'json',
@@ -1002,7 +1002,7 @@ if(!String.prototype.formatNum) {
 			return;
 		}
 		var self = this;
-		alert('html');
+		//alert('html');
 		$.ajax({
 			url: self._templatePath(name),
 			dataType: 'html',
