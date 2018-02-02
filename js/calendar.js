@@ -811,9 +811,9 @@ if(!String.prototype.formatNum) {
 			var endHour=$('select[name=finselheure]').val();
 			var endMinute=$('select[name=finselmin]').val();
 			var eventtype=$('select[name=eventype]').val();
-			var selectedDay=(this.options.position.start).getDate();
-			var selectedMonth=(this.options.position.start).getMonth();
-			var selectedYear=(this.options.position.start).getYear();
+			var selectedDay=parseInt((this.options.position.start).getDate(),10));
+			var selectedMonth=parseInt((this.options.position.start).getMonth(),10);
+			var selectedYear=parseInt('20'+(this.options.position.start).getYear(),10);
 			var titleEvent=$('#rdvtitle').val();
 			//alert(titleEvent);
 			$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute},fonction_retour,'text');
