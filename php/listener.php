@@ -8,7 +8,7 @@ class Listener
 	public function __construct()
 	{
 		$this->action=$_POST['action'];
-		echo "__construct";
+		//echo "__construct";
 	}
 	
 	public function ListenAction()
@@ -40,7 +40,7 @@ class Listener
 		
 		$oDAO = new DAO();
 		$oDAO->Insert_Event($title,$timestampstart,$timestampend,$eventype);
-		echo "test";
+		//echo "test";
 	}
 }
 
