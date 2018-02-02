@@ -142,7 +142,7 @@
 						</div>
 						<label class="rdv">
 							<h5>Titre </h5>
-							<input type="text" id="rdvtitle"> 
+							<input type="text" id="rdvtitle" name="txttitle"> 
 						</label>
 						<div class="btn-rdv">
 							<div class="btn-group">
