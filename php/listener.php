@@ -8,6 +8,7 @@ class Listener
 	public function __construct()
 	{
 		$this->action=$_POST['action'];
+		echo "__construct";
 	}
 	
 	public function ListenAction()
