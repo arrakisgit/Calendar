@@ -6,7 +6,7 @@ class DAO
 	public function __construct()
 	{
 		$this->db=null;
-		echo "connexio__cons";
+		//echo "connexio__cons";
 	}
 	
 	public function Connexion()
