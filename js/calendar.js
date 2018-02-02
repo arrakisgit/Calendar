@@ -807,8 +807,8 @@ if(!String.prototype.formatNum) {
 			to.start.setTime(new Date().getTime());
 		}else if(where == 'save') {
 			var startHour=$('select[name=debutselheure]').val();
-			/*var startMinute=$('select[name=debutselmin]').val();
-			var endHour=$('select[name=finselheure]'.val();
+			var startMinute=$('select[name=debutselmin]').val();
+			/*var endHour=$('select[name=finselheure]'.val();
 			var endMinute=$('select[name=finselmin]').val();
 			var eventtype=$('select[name=eventype]').val();*/
 			//selectedDay=this.getDay();
