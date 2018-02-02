@@ -806,6 +806,7 @@ if(!String.prototype.formatNum) {
 		} else if(where == 'today') {
 			to.start.setTime(new Date().getTime());
 		}else if(where == 'save') {
+			alert($('select[name=eventype]').val());
 			/*alert('ok');
 			startHour=$("#hoursstart option:selected").val();
 			alert(startHour);

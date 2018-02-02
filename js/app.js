@@ -45,15 +45,8 @@
 	$('.btn-group button[data-calendar-nav]').each(function() {
 		var $this = $(this);
 		$this.click(function() {
-			alert($this.data('calendar-nav'));
-			if ($this.data('calendar-nav')=='save')
-			{
-				alert($("$('select[name=eventype]')").val());
-			}
-			else
-			{
+			
 				calendar.navigate($this.data('calendar-nav'));
-			}
 		});
 	});
 	
