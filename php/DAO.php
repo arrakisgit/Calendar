@@ -1,11 +1,12 @@
 <?php
 class DAO
 {
-	public $db;
+	private $db;
 	
 	public function __construct()
 	{
 		$this->db=null;
+		echo "connexio__cons";
 	}
 	
 	public function Connexion()
@@ -18,6 +19,7 @@ class DAO
 	{
 		if ($this->db==null)
 		{
+			echo "connexio__cons2";
 			$this->Connexion();
 		}
 		
