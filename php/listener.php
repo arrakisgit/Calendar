@@ -26,13 +26,13 @@ class Listener
 	{
 		$title=$_POST['title'];
 		$event_type=$_POST['eventype'];
-		$selday=$_POST['selectedday'];
-		$selmonth=$_POST['selectedmonth'];
-		$selyear=$_POST['selectedyear'];
-		$starthour=$_POST['starthour'];
+		$selday=$_POST['selectedday']+0;
+		$selmonth=$_POST['selectedmonth']+0;
+		$selyear=$_POST['selectedyear']+0;
+		$starthour=$_POST['starthour']+0;
 		$startminute=$_POST['startminute'];
-		$endhour=$_POST['endhour'];
-		$endminute=$_POST['endminute'];
+		$endhour=$_POST['endhour']+0;
+		$endminute=$_POST['endminute']+0;
 		$eventype=$_POST['eventtype'];
 		echo ("0,".$startminute.",".$starthour.",".$selmonth.",".$selday.",".$selyear);")";
 		$timestampstart=mktime(0,$startminute,$starthour,$selmonth,$selday,$selyear);
