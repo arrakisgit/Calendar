@@ -810,7 +810,7 @@ if(!String.prototype.formatNum) {
 			var startMinute=$('select[name=debutselmin]').val();
 			var endHour=$('select[name=finselheure]'.val();
 			var endMinute=$('select[name=finselmin]').val();
-			var eventtype=$('select[name=eventype]').val();*/
+			var eventtype=$('select[name=eventype]').val();
 			//selectedDay=this.getDay();
 			//selectedMonth=this.getMonth();
 			//selectedYear=this.getYear();
