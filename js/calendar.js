@@ -811,15 +811,15 @@ if(!String.prototype.formatNum) {
 			endHour=$('select[name=finselheure]'.val();
 			endMinute=$('select[name=finselmin]').val();
 			eventtype=$('select[name=eventype]').val();
-			selectedDay=this.getDay();
-			selectedMonth=this.getMonth();
-			selectedYear=this.getYear();
+			//selectedDay=this.getDay();
+			//selectedMonth=this.getMonth();
+			//selectedYear=this.getYear();
 			titleEvent=$('#rdvtitle').val();
 			//alert(titleEvent);
 			//$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute});
 		}
 		else {
-			$.error(this.locale.error_where.format(where))
+			$.error(this.locale.error_where.format(where));
 		}
 		this.options.day = to.start.getFullYear() + '-' + to.start.getMonthFormatted() + '-' + to.start.getDateFormatted();
 		this.view();
