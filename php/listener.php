@@ -39,7 +39,7 @@ class Listener
 		
 		$oDAO = new DAO();
 		$oDAO->Insert_Event($title,$timestampstart,$timestampend,$eventype);
-		return "test";
+		echo "test";
 	}
 }
 
