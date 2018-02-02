@@ -816,7 +816,7 @@ if(!String.prototype.formatNum) {
 			var selectedYear=this.getYear();
 			var titleEvent=$('#rdvtitle').val();
 			alert(titleEvent);
-			//$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute});
+			$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute});
 		}
 		else {
 			$.error(this.locale.error_where.format(where));
