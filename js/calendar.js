@@ -806,14 +806,14 @@ if(!String.prototype.formatNum) {
 		} else if(where == 'today') {
 			to.start.setTime(new Date().getTime());
 		}else if(where == 'save') {
-			var startHour=$('select[name=debutselheure]').val();
-			var startMinute=$('select[name=debutselmin]').val();
-			var endHour=$('select[name=finselheure]').val();
-			var endMinute=$('select[name=finselmin]').val();
-			var eventtype=$('select[name=eventype]').val();
+			var startHour=$('select[name=debutselheure]').val() + 0;
+			var startMinute=$('select[name=debutselmin]').val() + 0;
+			var endHour=$('select[name=finselheure]').val() + 0;
+			var endMinute=$('select[name=finselmin]').val() + 0;
+			var eventtype=$('select[name=eventype]').val() + 0;
 			var selectedDay=(this.options.position.start).getDate()+0;
 			var selectedMonth=(this.options.position.start).getMonth()+0;
-			var selectedYear=(this.options.position.start).getYear()+2000;
+			var selectedYear=(this.options.position.start).getYear()+1900;
 			var titleEvent=$('#rdvtitle').val();
 			//alert(titleEvent);
 			$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute},fonction_retour,'text');
