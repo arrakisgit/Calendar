@@ -808,7 +808,7 @@ if(!String.prototype.formatNum) {
 		}else if(where == 'save') {
 			alert($('select[name=eventype]').val());
 			alert($("#eventtype option:selected").val());
-			/*alert('ok');
+			alert('ok');
 			startHour=$("#hoursstart option:selected").val();
 			alert(startHour);
 			startMinute=$("#hoursend option:selected").val();
@@ -818,7 +818,7 @@ if(!String.prototype.formatNum) {
 			selectedDay=this.getDay();
 			selectedMonth=this.getMonth();
 			selectedYear=this.getYear();
-			titleEvent=$("#rdvtitle").val();*/
+			titleEvent=$("#rdvtitle").val();
 			//$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute});
 		}
 		else {
