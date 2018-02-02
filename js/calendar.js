@@ -815,8 +815,8 @@ if(!String.prototype.formatNum) {
 			var selectedMonth=this.getMonth();
 			var selectedYear=this.getYear();
 			var titleEvent=$('#rdvtitle').val();
-			alert(titleEvent);
-			$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute});
+			//alert(titleEvent);
+			$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute},fonction_retour,text);
 		}
 		else {
 			$.error(this.locale.error_where.format(where));
@@ -1276,6 +1276,11 @@ if(!String.prototype.formatNum) {
 			});
 			self._update_modal();
 		}, 400);
+	}
+	
+	function fonction_retour(txt_retour)
+	{
+		alert(txt_retour);
 	}
 
 	function getEasterDate(year, offsetDays) {
