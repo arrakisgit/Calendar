@@ -35,11 +35,11 @@ class Listener
 		$endminute=''.$_POST['endminute'];//+0;
 		$eventype=$_POST['eventtype'];
 		echo "(0,".((int)$startminute).",".((int)$starthour).",".(((int)$selmonth)+1).",".((int)$selday).",".(((int)$selyear)+1900).")";
-		$timestampstart=mktime(0,$startminute,$starthour,$selmonth,$selday,$selyear);
-		$timestampend=mktime(0,$endminute,$endhour,$selmonth,$selday,$selyear);
+		$timestampstart=mktime(0,((int)$startminute),((int)$starthour),(((int)$selmonth)+1),((int)$selday),(((int)$selyear)+1900));
+		$timestampend=mktime(0,((int)$endminute),((int)$endhour),(((int)$selmonth)+1),((int)$selday),(((int)$selyear)+1900));
 		
-		/*$oDAO = new DAO();
-		$oDAO->Insert_Event($title,$timestampstart,$timestampend,$eventype);*/
+		$oDAO = new DAO();
+		$oDAO->Insert_Event($title,$timestampstart,$timestampend,$eventype);
 		//echo "test_".$selday;
 	}
 }
