@@ -16,17 +16,16 @@ foreach($db->query('SELECT * FROM T_Events') as $row) {
 */
 $out = array();
 $db=new PDO('mysql:host=localhost;dbname=Calendar_db;charset=utf8', 'root', 'root');
-$resultats=$db->query('SELECT * FROM `T_Events`;');
-$resultats->setFetchMode(PDO::FETCH_OBJ);
-while($resultat = $resultats->fetch())
+$sql='SELECT * FROM `T_Events`;';
+foreach($db->query($sql) as $row)
 {
 	$out[] = array(
-			'id' => $resultat->ID,
-			'title' => $resultat->TITLE,
-			'url' => Helper::url($resultat->URL),
-			'class' => $resultat->CLASS,
-			'start' => strtotime($resultat->START_DATE),
-			'end' => strtotime($resultat->END_DATE)
+			'id' => $row->ID,
+			'title' => $row->TITLE,
+			'url' => Helper::url($row->URL),
+			'class' => $row->CLASS,
+			'start' => strtotime($row->START_DATE).'000',
+			'end' => strtotime($row->END_DATE).'000'
 	);
 }
 
@@ -42,7 +41,7 @@ $ts_end=mktime(0, 30, 15, 1, 22,2018);
 			'start' => $ts_start.'000',
 			'end' => $ts_end.'000'
 	);*/
-
-echo json_encode(array('success' => 1, 'result' => $out));
+echo var_dump($out);
+//echo json_encode(array('success' => 1, 'result' => $out));
 
 ?>
