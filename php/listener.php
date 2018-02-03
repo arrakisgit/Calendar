@@ -34,7 +34,7 @@ class Listener
 		$endhour=$_POST['endhour']+0;
 		$endminute=$_POST['endminute']+0;
 		$eventype=$_POST['eventtype'];
-		echo ("0,".$startminute.",".$starthour.",".$selmonth.",".$selday.",".$selyear).")";
+		echo "(0,".$startminute.",".$starthour.",".$selmonth.",".$selday.",".$selyear.")";
 		$timestampstart=mktime(0,$startminute,$starthour,$selmonth,$selday,$selyear);
 		$timestampend=mktime(0,$endminute,$endhour,$selmonth,$selday,$selyear);
 		
