@@ -16,7 +16,7 @@ foreach($db->query('SELECT * FROM T_Events') as $row) {
 */
 $out = array();
 $db=new PDO('mysql:host=localhost;dbname=Calendar_db;charset=utf8', 'root', 'root');
-foreach($db->query('SELECT * FROM T_Events') as $row) {
+foreach($db->query('SELECT * FROM T_Events;') as $row) {
 	$out[] = array(
 			'id' => $row->ID,
 			'title' => $row->TITLE,
