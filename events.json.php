@@ -24,8 +24,8 @@ foreach($db->query($sql) as $row)
 			'title' => $row['TITLE'],
 			'url' => $row['URL'],
 			'class' => $row['CLASS'],
-			'start' => strtotime($row['START_DATE']).'000',
-			'end' => strtotime($row['END_DATE']).'000'
+			'start' => $row['START_DATE'].'000',
+			'end' => $row['END_DATE'].'000'
 	);
 }
 
