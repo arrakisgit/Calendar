@@ -812,8 +812,8 @@ if(!String.prototype.formatNum) {
 			var endMinute=$('select[name=finselmin]').val();
 			var eventtype=$('select[name=eventype]').val();
 			var selectedDay=(this.options.position.start).getDate();
-			var selectedMonth=(this.options.position.start).getMonth();
-			var selectedYear=(this.options.position.start).getYear();
+			var selectedMonth=(this.options.position.start).getMonth()+1;
+			var selectedYear=(this.options.position.start).getYear()+1900;
 			var titleEvent=$('#rdvtitle').val();
 			//alert(titleEvent);
 			$.post("php/listener.php", {action: "insertEvent", eventtype: eventtype, title: titleEvent, selectedday: selectedDay, selectedmonth: selectedMonth, selectedyear: selectedYear, starthour: startHour, startminute: startMinute, endhour: endHour, endminute: endMinute},fonction_retour,'text');
