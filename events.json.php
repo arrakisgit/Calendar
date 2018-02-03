@@ -15,7 +15,7 @@ foreach($db->query('SELECT * FROM T_Events') as $row) {
 }
 */
 $out = array();
-$db=new PDO('mysql:host=localhost;dbname=Calendar_db;charset=utf8', 'root', 'root');
+/*$db=new PDO('mysql:host=localhost;dbname=Calendar_db;charset=utf8', 'root', 'root');
 $sql="SELECT * FROM `T_Events`";
 foreach($db->query($sql) as $row)
 {
@@ -28,9 +28,9 @@ foreach($db->query($sql) as $row)
 			'end' => strtotime($row->END_DATE).'000'
 	);
 }
+*/
 
-
-/*$ts_start= mktime(0, 0, 14, 1, 22,2018);
+$ts_start= mktime(0, 0, 14, 1, 22,2018);
 $ts_end=mktime(0, 30, 15, 1, 22,2018);
 
 	$out[] = array(
@@ -40,7 +40,7 @@ $ts_end=mktime(0, 30, 15, 1, 22,2018);
 			'class' => 'event-important',
 			'start' => $ts_start.'000',
 			'end' => $ts_end.'000'
-	);*/
+	);
 echo var_dump($out);
 //echo json_encode(array('success' => 1, 'result' => $out));
 
