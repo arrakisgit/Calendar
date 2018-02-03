@@ -48,7 +48,7 @@ class Listener
 		 $timestampend=mktime(0,$en_min,$en_hr,$intmonth,$intday,$intyear);
 		 $oDAO = new DAO();
 		 $oDAO->Insert_Event($title,$timestampstart,$timestampend,$eventype);
-		 echo "test_";//$timestampstart;
+		 //echo "test_";//$timestampstart;
 	}
 }
 

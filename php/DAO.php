@@ -28,5 +28,30 @@ class DAO
 		$req=$this->db->prepare("INSERT INTO T_Events (ID,TITLE,URL,CLASS,START_DATE,END_DATE) VALUES (NULL,'".$title."','url_event','".$event_class."',".$timestampstart.",".$timestampend.");");
 		$req->execute();
 	}
+	
+	public function get_Event_Stored()
+	{
+		$out = array();
+		if ($this->db==null)
+		{
+			$this->Connexion();
+		}
+		
+		$sql="SELECT * FROM T_Events";
+		
+		foreach($this->db->query($sql) as $row)
+		{
+			$out[] = array(
+					'id' => $row['ID'],
+					'title' => $row['TITLE'],
+					'url' => $row['URL'],
+					'class' => $row['CLASS'],
+					'start' => $row['START_DATE'].'000',
+					'end' => $row['END_DATE'].'000'
+			);
+		}
+		return $out;
+		
+	}
 }
 ?>
