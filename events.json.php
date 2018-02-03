@@ -24,8 +24,8 @@ foreach($db->query($sql) as $row)
 			'title' => $row['TITLE'],
 			'url' => $row['URL'],
 			'class' => $row['CLASS'],
-			'start' => $row['START_DATE'].'000',
-			'end' => $row['END_DATE'].'000'
+			'start' => $row['START_DATE'].'',
+			'end' => $row['END_DATE'].''
 	);
 }
 
@@ -49,7 +49,7 @@ $ts_end=mktime(0, 30, 15, 1, 22,2018);
 			'start' => $ts_start.'000',
 			'end' => $ts_end.'000'
 	);*/
-echo var_dump($out);
-//echo json_encode(array('success' => 1, 'result' => $out));
+//echo var_dump($out);
+echo json_encode(array('success' => 1, 'result' => $out));
 
 ?>
