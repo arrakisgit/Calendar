@@ -16,14 +16,17 @@ foreach($db->query('SELECT * FROM T_Events') as $row) {
 */
 $out = array();
 $db=new PDO('mysql:host=localhost;dbname=Calendar_db;charset=utf8', 'root', 'root');
-foreach($db->query('SELECT * FROM T_Events;') as $row) {
+$resultats=$db->query('SELECT * FROM T_Events;');
+$resultats->setFetchMode(PDO::FETCH_OBJ);
+while($resultat = $resultats->fetch())
+{
 	$out[] = array(
-			'id' => $row->ID,
-			'title' => $row->TITLE,
-			'url' => Helper::url($row->URL),
-			'class' => $row->CLASS,
-			'start' => strtotime($row->START_DATE),
-			'end' => strtotime($row->END_DATE)
+			'id' => $resultat->ID,
+			'title' => $resultat->TITLE,
+			'url' => Helper::url($resultat->URL),
+			'class' => $resultat->CLASS,
+			'start' => strtotime($resultat->START_DATE),
+			'end' => strtotime($resultat->END_DATE)
 	);
 }
 
