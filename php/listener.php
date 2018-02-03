@@ -38,9 +38,9 @@ class Listener
 		$timestampstart=mktime(0,((int)$startminute),((int)$starthour),(((int)$selmonth)+1),((int)$selday),(((int)$selyear)+1900));
 		$timestampend=mktime(0,((int)$endminute),((int)$endhour),(((int)$selmonth)+1),((int)$selday),(((int)$selyear)+1900));
 		
-		$oDAO = new DAO();
-		$oDAO->Insert_Event($title,$timestampstart,$timestampend,$eventype);
-		//echo "test_".$selday;
+		/*$oDAO = new DAO();
+		$oDAO->Insert_Event($title,$timestampstart,$timestampend,$eventype);*/
+		echo "test_".$timestampstart;
 	}
 }
 
