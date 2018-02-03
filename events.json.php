@@ -41,6 +41,14 @@ $ts_end=mktime(0, 30, 15, 1, 22,2018);
 			'start' => $ts_start.'000',
 			'end' => $ts_end.'000'
 	);
+	$out[] = array(
+			'id' => 2,
+			'title' => 'Mon Anniversaire',
+			'url' => 'site web2',
+			'class' => 'event-important',
+			'start' => $ts_start.'000',
+			'end' => $ts_end.'000'
+	);
 echo var_dump($out);
 //echo json_encode(array('success' => 1, 'result' => $out));
 
